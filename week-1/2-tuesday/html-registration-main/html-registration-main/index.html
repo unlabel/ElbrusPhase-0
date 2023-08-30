@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Форма регистрации</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const form = document.querySelector("form");
+          
+          form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const login = form.elements.Login.value;
+            const password = form.elements.Password.value;
+            const fullName = form.elements.FirstLastName.value;
+            
+            console.log("Логин: " + login);
+            console.log("Пароль: " + password);
+            console.log("ФИО: " + fullName);
+          });
+        });
+      </script>
   </head>
   <body>
     <form>
